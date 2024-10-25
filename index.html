@@ -30,7 +30,7 @@
         }
         img {
             border-radius: 50%;
-            width: 130px;
+            width: 200px; /* Ukuran foto yang lebih besar */
             margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
@@ -58,10 +58,11 @@
             margin: 10px 0;
             background-color: #fff0f8;
             border-radius: 8px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .icon-section:hover {
             background-color: #ffe4f0;
+            transform: translateY(-2px);
         }
         .icon {
             width: 45px;
@@ -70,6 +71,10 @@
         }
         .icon:hover {
             transform: rotate(10deg) scale(1.1);
+        }
+        .icon-section p {
+            font-weight: 600; /* Membuat teks lebih tebal */
+            text-decoration: underline; /* Memberikan efek garis bawah */
         }
         .cta-button {
             display: inline-block;
@@ -81,17 +86,18 @@
             border-radius: 8px;
             font-size: 17px;
             font-weight: 600;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .cta-button:hover {
             background-color: #ff3385;
+            transform: scale(1.05);
         }
         @media (max-width: 500px) {
             .container {
                 padding: 30px;
             }
             img {
-                width: 100px;
+                width: 150px; /* Ukuran foto yang lebih kecil untuk tampilan mobile */
             }
             .icon {
                 width: 35px;
