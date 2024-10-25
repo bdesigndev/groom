@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JASATUGAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f1ff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 500px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .container:hover {
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            border-radius: 50%;
+            width: 130px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            font-size: 28px;
+            color: #3d3d3d;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 17px;
+            color: #666;
+            margin: 10px 0 25px;
+        }
+        .icons {
+            margin-top: 20px;
+        }
+        .icon-section {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #fff0f8;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .icon-section:hover {
+            background-color: #ffe4f0;
+        }
+        .icon {
+            width: 45px;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+        .icon:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 35px;
+            background-color: #ff66b2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #ff3385;
+        }
+        @media (max-width: 500px) {
+            .container {
+                padding: 30px;
+            }
+            img {
+                width: 100px;
+            }
+            .icon {
+                width: 35px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 15px;
+            }
+            .cta-button {
+                padding: 10px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/jasatugas.png" alt="Foto Profil">
+        <h2>JASATUGAS</h2>
+        <p>JASA KETIK - PENGERJAAN TUGAS - PARAFRASE</p>
+        <div class="icons">
+            <div class="icon-section">
+                <img src="images/ig.png" alt="Instagram" class="icon">
+                <p>Ikuti kami di Instagram</p>
+            </div>
+            <div class="icon-section">
+                <img src="images/wa.png" alt="WhatsApp" class="icon">
+                <p>Hubungi kami di WhatsApp</p>
+            </div>
+        </div>
+        <a href="produk.html" class="cta-button">Lihat Produk</a>
+    </div>
+</body>
+</html>
