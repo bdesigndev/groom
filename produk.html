@@ -14,43 +14,51 @@
             padding: 20px;
             text-align: center;
         }
+
         h1 {
             font-size: 32px;
             color: #3d3d3d;
             margin-bottom: 20px;
         }
+
         .product-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid; /* Menggunakan grid untuk penataan */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mengatur ukuran card */
+            gap: 20px; /* Jarak antara card produk */
+            justify-items: center; /* Meratakan card di tengah */
         }
+
         .product-card {
             background-color: #ffffff;
             border-radius: 15px;
             padding: 20px;
-            margin: 10px;
-            max-width: 250px;
+            max-width: 250px; /* Maksimum lebar card */
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease;
         }
+
         .product-card:hover {
             transform: translateY(-5px);
         }
+
         .product-image {
-            width: 100%;
+            width: 100%; /* Mengatur gambar agar mengikuti lebar card */
             border-radius: 10px;
             margin-bottom: 10px;
         }
+
         .product-name {
             font-size: 20px;
             font-weight: 600;
             margin: 10px 0;
         }
+
         .product-price {
             font-size: 18px;
             color: #7B5A3E; /* Warna coklat untuk harga produk */
             margin-bottom: 10px;
         }
+
         .cta-button {
             padding: 10px 20px;
             background-color: #7B5A3E; /* Warna coklat untuk tombol */
@@ -59,9 +67,11 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
+
         .cta-button:hover {
             background-color: #5a3e2e; /* Warna coklat gelap saat hover */
         }
+
         .back-link {
             margin-top: 20px;
             display: inline-block;
@@ -69,12 +79,14 @@
             color: #7B5A3E; /* Warna coklat untuk link kembali */
             font-weight: bold;
         }
+
         @media (max-width: 500px) {
             h1 {
                 font-size: 24px; /* Ukuran font lebih kecil untuk perangkat mobile */
             }
+
             .product-card {
-                max-width: 200px; /* Ukuran card produk lebih kecil untuk perangkat mobile */
+                max-width: 100%; /* Membuat card mengisi lebar penuh pada perangkat mobile */
             }
         }
     </style>
@@ -91,7 +103,7 @@
         <div class="product-card">
             <img src="images/parafrase.png" alt="Produk 2" class="product-image">
             <div class="product-name">Parafrase</div>
-            <div class="product-price">Mulai DariRp 100.000</div>
+            <div class="product-price">Mulai Dari Rp 100.000</div>
             <a href="#" class="cta-button">Beli Sekarang</a>
         </div>
         <div class="product-card">
@@ -101,23 +113,23 @@
             <a href="#" class="cta-button">Beli Sekarang</a>
         </div>
         <div class="product-card">
-              <img src="images/prop.png" alt="Produk 2" class="product-image">
-              <div class="product-name">Proposal</div>
-              <div class="product-price">Rp 300.000 - Rp 1.500.000</div>
-              <a href="#" class="cta-button">Beli Sekarang</a>
-          </div>
-          <div class="product-card">
-              <img src="images/skripsi.png" alt="Produk 3" class="product-image">
-              <div class="product-name">Skripsi</div>
-              <div class="product-price">Menyesuaikan</div>
-              <a href="#" class="cta-button">Beli Sekarang</a>
-          </div>
-          <div class="product-card">
-              <img src="images/tesis.png" alt="Produk 3" class="product-image">
-              <div class="product-name">Thesis</div>
-              <div class="product-price">Menyesuaikan</div>
-              <a href="#" class="cta-button">Beli Sekarang</a>
-          </div>
+            <img src="images/prop.png" alt="Produk 4" class="product-image">
+            <div class="product-name">Proposal</div>
+            <div class="product-price">Rp 300.000 - Rp 1.500.000</div>
+            <a href="#" class="cta-button">Beli Sekarang</a>
+        </div>
+        <div class="product-card">
+            <img src="images/skripsi.png" alt="Produk 5" class="product-image">
+            <div class="product-name">Skripsi</div>
+            <div class="product-price">Menyesuaikan</div>
+            <a href="#" class="cta-button">Beli Sekarang</a>
+        </div>
+        <div class="product-card">
+            <img src="images/tesis.png" alt="Produk 6" class="product-image">
+            <div class="product-name">Thesis</div>
+            <div class="product-price">Menyesuaikan</div>
+            <a href="#" class="cta-button">Beli Sekarang</a>
+        </div>
         <!-- Tambahkan lebih banyak produk sesuai kebutuhan -->
     </div>
     <a href="index.html" class="back-link">Kembali ke Beranda</a>
