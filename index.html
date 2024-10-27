@@ -6,9 +6,22 @@
     <title>JASATUGAS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --main-bg-color: #f7e6d8; /* Warna cokelat susu lembut */
+            --grad-bg-color: #d2b48c;
+            --container-bg-color: #ffffff;
+            --hover-bg-color: #d0b59c;
+            --icon-bg-color: #d8c4a3;
+            --icon-hover-bg-color: #d0b59c;
+            --cta-color: #ff66b2;
+            --cta-hover-color: #ff3385;
+            --text-color: #3d3d3d;
+            --desc-text-color: #666;
+        }
+
         body {
-            background-color: #f7e6d8; /* Warna cokelat susu lembut */
-            background-image: linear-gradient(315deg, #f7e6d8 0%, #d2b48c 74%); /* Gradien lembut */
+            background-color: var(--main-bg-color);
+            background-image: linear-gradient(315deg, var(--main-bg-color) 0%, var(--grad-bg-color) 74%);
             font-family: 'Poppins', sans-serif;
             display: flex;
             align-items: center;
@@ -18,70 +31,83 @@
             padding: 0 20px;
             text-align: center;
         }
+
         .container {
-            background-color: #ffffff;
+            background-color: var(--container-bg-color);
             border-radius: 15px;
             padding: 40px;
             max-width: 500px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
             transition: box-shadow 0.3s ease-in-out;
         }
+
         .container:hover {
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
+
         img {
             border-radius: 50%;
-            width: 200px; /* Ukuran foto yang lebih besar */
+            width: 200px;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
-        img:hover {
+
+        img[loading="lazy"] {
             transform: scale(1.05);
         }
+
         h2 {
             font-size: 28px;
-            color: #3d3d3d; /* Warna teks judul */
+            color: var(--text-color);
             font-weight: 600;
             margin-bottom: 10px;
         }
+
         p {
             font-size: 17px;
-            color: #666; /* Warna teks deskripsi */
+            color: var(--desc-text-color);
             margin: 10px 0 25px;
         }
+
         .icons {
             margin-top: 20px;
         }
+
         .icon-section {
             display: flex;
             align-items: center;
             padding: 12px;
             margin: 10px 0;
-            background-color: #d8c4a3; /* Warna latar belakang coklat lembut */
+            background-color: var(--icon-bg-color);
             border-radius: 8px;
             transition: background-color 0.3s, transform 0.3s;
         }
+
         .icon-section:hover {
-            background-color: #d0b59c; /* Warna latar belakang coklat lembut saat hover */
+            background-color: var(--icon-hover-bg-color);
             transform: translateY(-2px);
         }
+
         .icon {
             width: 45px;
             margin-right: 15px;
             transition: transform 0.3s ease;
         }
+
         .icon:hover {
             transform: rotate(10deg) scale(1.1);
         }
+
         .icon-section p {
-            font-weight: 600; /* Membuat teks lebih tebal */
-            text-decoration: underline; /* Memberikan efek garis bawah */
+            font-weight: 600;
+            text-decoration: underline;
         }
+
         .cta-button {
             display: inline-block;
             margin-top: 25px;
             padding: 12px 35px;
-            background-color: #ff66b2; /* Warna tombol */
+            background-color: var(--cta-color);
             color: white;
             text-decoration: none;
             border-radius: 8px;
@@ -89,44 +115,61 @@
             font-weight: 600;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .cta-button:hover {
-            background-color: #ff3385; /* Warna tombol saat hover */
+            background-color: var(--cta-hover-color);
             transform: scale(1.05);
         }
+
+        /* Responsive Design */
         @media (max-width: 500px) {
             .container {
                 padding: 30px;
             }
+
             img {
-                width: 150px; /* Ukuran foto yang lebih kecil untuk tampilan mobile */
+                width: 150px;
             }
+
             .icon {
                 width: 35px;
             }
+
             h2 {
                 font-size: 24px;
             }
+
             p {
                 font-size: 15px;
             }
+
             .cta-button {
                 padding: 10px 30px;
                 font-size: 16px;
+            }
+        }
+
+        /* Disable hover effects on touch screens */
+        @media (hover: none) {
+            .cta-button:hover,
+            .icon-section:hover {
+                transform: none;
+                background-color: var(--cta-color);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="images/jasatugas.png" alt="Foto Profil">
+        <img src="images/jasatugas.png" alt="Foto Profil" loading="lazy">
         <h2>JASATUGAS</h2>
         <p>JASA KETIK - PENGERJAAN TUGAS - PARAFRASE</p>
         <div class="icons">
-            <a href="https://www.instagram.com/jasatugas12__/profilecard/?igsh=MXdqMjVjdDljMjVidA%3D%3D" target="_blank" class="icon-section">
+            <a href="https://www.instagram.com/jasatugas12__/profilecard/?igsh=MXdqMjVjdDljMjVidA%3D%3D" target="_blank" class="icon-section" aria-label="Ikuti kami di Instagram">
                 <img src="images/ig.png" alt="Instagram" class="icon">
                 <p>Ikuti kami di Instagram</p>
             </a>
-            <a href="https://wa.me/6282281236780" target="_blank" class="icon-section">
+            <a href="https://wa.me/6282281236780" target="_blank" class="icon-section" aria-label="Hubungi kami di WhatsApp">
                 <img src="images/wa.png" alt="WhatsApp" class="icon">
                 <p>Hubungi kami di WhatsApp</p>
             </a>
