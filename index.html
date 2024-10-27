@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JASA KETIK, PENGERJAAN TUGAS, dan PARAFRASE - layanan JASATUGAS untuk kebutuhan tugas Anda.">
     <title>JASATUGAS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         :root {
-            --main-bg-color: #f7e6d8; /* Warna cokelat susu lembut */
-            --grad-bg-color: #d2b48c;
-            --container-bg-color: #ffffff;
-            --hover-bg-color: #d0b59c;
-            --icon-bg-color: #d8c4a3;
-            --icon-hover-bg-color: #d0b59c;
+            --main-bg-color: #f7e6d8;
+            --text-color: #3d3d3d;
             --cta-color: #ff66b2;
             --cta-hover-color: #ff3385;
-            --text-color: #3d3d3d;
-            --desc-text-color: #666;
+            --icon-bg-color: #d8c4a3;
+            --icon-hover-color: #d0b59c;
         }
 
         body {
             background-color: var(--main-bg-color);
-            background-image: linear-gradient(315deg, var(--main-bg-color) 0%, var(--grad-bg-color) 74%);
+            background-image: linear-gradient(315deg, var(--main-bg-color) 0%, #d2b48c 74%);
             font-family: 'Poppins', sans-serif;
             display: flex;
             align-items: center;
@@ -30,19 +28,28 @@
             margin: 0;
             padding: 0 20px;
             text-align: center;
+            color: var(--text-color);
         }
 
         .container {
-            background-color: var(--container-bg-color);
+            background-color: #ffffff;
             border-radius: 15px;
             padding: 40px;
             max-width: 500px;
+            width: 100%;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
             transition: box-shadow 0.3s ease-in-out;
+            animation: fadeIn 0.6s ease-out;
         }
 
         .container:hover {
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         img {
@@ -52,7 +59,7 @@
             transition: transform 0.3s ease;
         }
 
-        img[loading="lazy"] {
+        img:hover {
             transform: scale(1.05);
         }
 
@@ -60,31 +67,36 @@
             font-size: 28px;
             color: var(--text-color);
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         p {
             font-size: 17px;
-            color: var(--desc-text-color);
+            color: #666;
             margin: 10px 0 25px;
         }
 
         .icons {
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            align-items: center;
         }
 
         .icon-section {
             display: flex;
             align-items: center;
             padding: 12px;
-            margin: 10px 0;
             background-color: var(--icon-bg-color);
             border-radius: 8px;
             transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 300px;
         }
 
         .icon-section:hover {
-            background-color: var(--icon-hover-bg-color);
+            background-color: var(--icon-hover-color);
             transform: translateY(-2px);
         }
 
@@ -101,11 +113,12 @@
         .icon-section p {
             font-weight: 600;
             text-decoration: underline;
+            margin: 0;
         }
 
         .cta-button {
             display: inline-block;
-            margin-top: 25px;
+            margin: 30px auto 0;
             padding: 12px 35px;
             background-color: var(--cta-color);
             color: white;
@@ -114,6 +127,7 @@
             font-size: 17px;
             font-weight: 600;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            width: fit-content;
         }
 
         .cta-button:hover {
@@ -121,7 +135,16 @@
             transform: scale(1.05);
         }
 
-        /* Responsive Design */
+        .cta-button:active {
+            background-color: #ff0055;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #999;
+        }
+
         @media (max-width: 500px) {
             .container {
                 padding: 30px;
@@ -149,32 +172,34 @@
             }
         }
 
-        /* Disable hover effects on touch screens */
-        @media (hover: none) {
-            .cta-button:hover,
-            .icon-section:hover {
-                transform: none;
-                background-color: var(--cta-color);
-            }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="images/jasatugas.png" alt="Foto Profil" loading="lazy">
+        <header>
+            <h1>JASATUGAS</h1>
+        </header>
+        <img src="images/jasatugas.png" alt="Foto Profil">
         <h2>JASATUGAS</h2>
         <p>JASA KETIK - PENGERJAAN TUGAS - PARAFRASE</p>
         <div class="icons">
-            <a href="https://www.instagram.com/jasatugas12__/profilecard/?igsh=MXdqMjVjdDljMjVidA%3D%3D" target="_blank" class="icon-section" aria-label="Ikuti kami di Instagram">
-                <img src="images/ig.png" alt="Instagram" class="icon">
+            <a href="https://www.instagram.com/jasatugas12__/" target="_blank" rel="noopener noreferrer" class="icon-section">
+                <img src="images/ig.png" alt="Logo Instagram JASATUGAS" class="icon">
                 <p>Ikuti kami di Instagram</p>
             </a>
-            <a href="https://wa.me/6282281236780" target="_blank" class="icon-section" aria-label="Hubungi kami di WhatsApp">
-                <img src="images/wa.png" alt="WhatsApp" class="icon">
+            <a href="https://wa.me/6282281236780" target="_blank" rel="noopener noreferrer" class="icon-section">
+                <img src="images/wa.png" alt="Logo WhatsApp JASATUGAS" class="icon">
                 <p>Hubungi kami di WhatsApp</p>
             </a>
         </div>
         <a href="produk.html" class="cta-button">Lihat Produk</a>
+        <footer>
+            <p>&copy; 2024 JASATUGAS. Semua Hak Dilindungi.</p>
+        </footer>
     </div>
 </body>
 </html>
