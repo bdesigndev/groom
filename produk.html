@@ -22,19 +22,24 @@
         }
 
         .product-container {
-            display: grid; /* Menggunakan grid untuk penataan */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mengatur ukuran card */
+            display: flex; /* Menggunakan flexbox untuk penataan */
+            flex-wrap: wrap; /* Agar card dapat membungkus ke baris berikutnya */
+            justify-content: center; /* Meratakan card di tengah */
             gap: 20px; /* Jarak antara card produk */
-            justify-items: center; /* Meratakan card di tengah */
         }
 
         .product-card {
             background-color: #ffffff;
             border-radius: 15px;
             padding: 20px;
-            max-width: 250px; /* Maksimum lebar card */
+            width: 200px; /* Lebar tetap untuk semua card */
+            height: 300px; /* Tinggi tetap untuk semua card */
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Menengahkan konten dalam card */
+            justify-content: space-between; /* Membagi ruang antara elemen dalam card */
         }
 
         .product-card:hover {
@@ -45,6 +50,8 @@
             width: 100%; /* Mengatur gambar agar mengikuti lebar card */
             border-radius: 10px;
             margin-bottom: 10px;
+            max-height: 150px; /* Maksimum tinggi gambar */
+            object-fit: cover; /* Memastikan gambar tetap dalam proporsi */
         }
 
         .product-name {
@@ -86,7 +93,7 @@
             }
 
             .product-card {
-                max-width: 100%; /* Membuat card mengisi lebar penuh pada perangkat mobile */
+                width: 100%; /* Membuat card mengisi lebar penuh pada perangkat mobile */
             }
         }
     </style>
@@ -130,7 +137,6 @@
             <div class="product-price">Menyesuaikan</div>
             <a href="#" class="cta-button">Beli Sekarang</a>
         </div>
-        <!-- Tambahkan lebih banyak produk sesuai kebutuhan -->
     </div>
     <a href="index.html" class="back-link">Kembali ke Beranda</a>
 </body>
