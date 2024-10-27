@@ -23,17 +23,16 @@
 
         .product-container {
             display: flex; /* Menggunakan flexbox untuk penataan */
-            flex-wrap: wrap; /* Agar card dapat membungkus ke baris berikutnya */
-            justify-content: center; /* Meratakan card di tengah */
+            justify-content: space-between; /* Mengatur jarak antar card agar rapi */
             gap: 20px; /* Jarak antara card produk */
+            flex-wrap: nowrap; /* Tidak membungkus ke baris berikutnya */
         }
 
         .product-card {
             background-color: #ffffff;
             border-radius: 15px;
             padding: 20px;
-            width: 200px; /* Lebar tetap untuk semua card */
-            height: 300px; /* Tinggi tetap untuk semua card */
+            width: calc(100% / 6 - 20px); /* Menghitung lebar card berdasarkan 6 produk */
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease;
             display: flex;
@@ -85,6 +84,15 @@
             text-decoration: none;
             color: #7B5A3E; /* Warna coklat untuk link kembali */
             font-weight: bold;
+        }
+
+        @media (max-width: 900px) {
+            .product-container {
+                flex-wrap: wrap; /* Membungkus card pada layar yang lebih kecil */
+            }
+            .product-card {
+                width: calc(50% - 20px); /* Setiap card lebar 50% untuk dua produk dalam satu baris */
+            }
         }
 
         @media (max-width: 500px) {
